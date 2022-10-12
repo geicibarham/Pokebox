@@ -1,0 +1,7 @@
+.outer__container{
+  display: grid;
+  min-height: 100vh;
+  background-color: #fbd743;
+  justify-items: center;
+    
+}
