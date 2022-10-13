@@ -1,3 +1,17 @@
+.inline__icon{
+    width:20px;
+}
+
+.sort__button{
+border:none;
+padding:18px;
+margin-top:20px;
+border-radius: 8px;
+background-color: #ff1f1f;
+color:white;
+cursor: pointer;
+}
+
 .pokemonImage {
     width: 200px;
     border-radius: 10px;
@@ -27,12 +41,13 @@
 }
 
 
-.pokeName{
-    text-transform: capitalize; 
+.pokeName {
+    text-transform: capitalize;
 }
+
 @media screen and (max-width:768px) {
-    .card{
-        display:grid;
+    .card {
+        display: grid;
         grid-template-columns: 1fr;
     }
 }

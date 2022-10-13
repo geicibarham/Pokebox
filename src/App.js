@@ -1,5 +1,5 @@
 
-import './App.css';
+
 import Header from './components/header/Header';
 import Cardlist from './components/cardList/Cardlist';
 function App() {

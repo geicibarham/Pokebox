@@ -1,6 +1,7 @@
 
 import styles from './card.module.css'
 import React, { useState, useEffect } from 'react';
+import pokemonIcon from '../../assets/images/poke_pika.png'
 const Card = ({ pokemon}) => {
 const [sortedList,setSortedList] = useState({pokemon})
 
@@ -10,9 +11,7 @@ const [sortedList,setSortedList] = useState({pokemon})
         
     }
 
-    const test = () => {
-        
-    }
+
     // let savetoLocal = () => {
 
 
@@ -37,7 +36,15 @@ const [sortedList,setSortedList] = useState({pokemon})
     // }
     return (
         <>
-            <button onClick={sortAz}>See Pokemons in Alphabetical Order</button>
+            <button
+            className={styles.sort__button}
+             onClick={sortAz}>
+                <span>
+                <img 
+                className={styles.inline__icon}
+                src={pokemonIcon} alt="pikachu icon"/>
+                Pokemons in Alphabetical Order
+                </span></button>
             <div className={styles.card}>
 
                 {pokemon.map(pokemonName => (
