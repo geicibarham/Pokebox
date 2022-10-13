@@ -2,6 +2,7 @@
 import styles from './card.module.css'
 import React, { useState, useEffect } from 'react';
 import pokemonIcon from '../../assets/images/poke_pika.png'
+import Favorites from '../favorites/Favorites';
 const Card = ({ pokemon}) => {
 const [sortedList,setSortedList] = useState({pokemon})
 
@@ -56,7 +57,9 @@ const [sortedList,setSortedList] = useState({pokemon})
                         <button>Save</button>
                     </div>
                 ))}
+        
             </div>
+          
         </>
     )
 }

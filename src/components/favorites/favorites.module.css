@@ -1,0 +1,19 @@
+.favorites{
+    background-color: #ff1f1f;
+    height: 20%;
+    color:white;
+    border-radius: 8px;
+    padding:8px;
+   
+}
+
+@media screen and (max-width:768px) {
+    .favorites{
+    
+      width: 80%;
+      height: fit-content;
+      justify-content: center;
+      text-align: center;
+     
+    }
+  }
