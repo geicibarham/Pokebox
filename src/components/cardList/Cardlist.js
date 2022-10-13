@@ -10,9 +10,13 @@ const Cardlist = () => {
 
     useEffect(() => {
         axios.get('https://pokeapi.co/api/v2/pokemon').then(res => {
-          setPokemon(res.data.results.map(pokemonName => pokemonName.name))
+          setPokemon(res.data.results.map(pokemonName => pokemonName.name)
+          )
+         
         })
     }, [])
+
+  
     return (
         <section className={styles.outer__container}>
         <Card pokemon={pokemon} />
