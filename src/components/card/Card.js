@@ -1,10 +1,9 @@
-
 import styles from './card.module.css'
 import React, { useState, useEffect } from 'react';
 import pokemonIcon from '../../assets/images/poke_pika.png'
 import Favorites from '../favorites/Favorites';
 
-const Card = ({ pokemon }) => {
+const Card = ({ pokemon,showFavorites }) => {
     const [sortedList, setSortedList] = useState({ pokemon })
 
 
@@ -38,6 +37,7 @@ const Card = ({ pokemon }) => {
     }
         return (
             <>
+            <div className={styles.button__container}>
                 <button
                     className={styles.sort__button}
                     onClick={sortAz}>
@@ -47,6 +47,10 @@ const Card = ({ pokemon }) => {
                             src={pokemonIcon} alt="pikachu icon" />
                         Pokemons in Alphabetical Order
                     </span></button>
+                    <button className={styles.favorites__button}
+                    onClick={showFavorites}>Favorites 
+                    ⭐ </button>
+                    </div>
                 <div className={styles.card}>
 
                     {pokemon.map(pokemonName => (
@@ -66,4 +70,3 @@ const Card = ({ pokemon }) => {
     }
 
     export default Card;
-

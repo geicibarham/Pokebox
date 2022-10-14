@@ -1,15 +1,34 @@
-.inline__icon{
-    width:20px;
+.button__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    width: 50%;
 }
 
-.sort__button{
-border:none;
-padding:18px;
-margin-top:20px;
-border-radius: 8px;
-background-color: #ff1f1f;
-color:white;
-cursor: pointer;
+.inline__icon {
+    width: 20px;
+}
+
+.sort__button {
+    border: none;
+    padding: 18px;
+    margin-top: 20px;
+    border-radius: 8px;
+    background-color: #ff1f1f;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+
+}
+
+.favorites__button {
+    background-color: rgb(218, 192, 255);
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+
 }
 
 .pokemonImage {

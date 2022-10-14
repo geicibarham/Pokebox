@@ -8,12 +8,9 @@
     
 }
 
-.wrapping_container{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
- 
+.loading{
+  color:red;
 }
-
 @media screen and (max-width:768px) {
   .wrapping_container{
     display: grid;
