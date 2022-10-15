@@ -18,7 +18,9 @@ const Favorites = () => {
     setItems(newitems)
   }
   return (
-    <section className={styles.favorites}>
+
+    <section className={styles.outer__container}>
+    <div className={styles.favorites}>
       <Link className={styles.seePokemons__button} to="/">
         See Pokemons
       </Link>
@@ -35,6 +37,7 @@ const Favorites = () => {
             </div>
           ))}
       </div>
+    </div>
     </section>
   );
 };

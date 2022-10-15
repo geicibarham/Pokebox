@@ -6,6 +6,8 @@ body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
+
+
 :root {
   --blue: blue;
   --red: red;
@@ -13,4 +15,9 @@ body {
   --white: white;
   --nav-save: #363b81;
   --light-blue:#5db9ff;
+}
+
+.App{
+  background-color: var(--yellow);
+
 }
