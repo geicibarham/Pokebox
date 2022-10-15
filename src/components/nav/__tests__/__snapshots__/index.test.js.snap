@@ -2,12 +2,12 @@
 
 exports[`Nav component matches snapshot DOM node structure 1`] = `
 <DocumentFragment>
-  <section
+  <nav
     class="nav"
   >
     <h1>
       Welcome To Pokebox!
     </h1>
-  </section>
+  </nav>
 </DocumentFragment>
 `;
