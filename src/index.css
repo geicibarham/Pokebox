@@ -5,3 +5,12 @@ body {
   min-height: 100vh;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
+
+:root {
+  --blue: blue;
+  --red: red;
+  --yellow: #fbd743;
+  --white: white;
+  --nav-save: #363b81;
+  --light-blue:#5db9ff;
+}

@@ -1,27 +1,20 @@
 import styles from "./card.module.css";
-import React, { useState, useEffect } from "react";
 import pokemonIcon from "../../assets/images/poke_pika.png";
-import Favorites from "../favorites/Favorites";
-import Search from "../search/Search";
+
+import { Link } from "react-router-dom";
 const Card = (props) => {
-  let savetoLocal = () => {
-    let pok;
-    for (let i = 0; i < props.pokemon.length; i++) {
-      pok = props.pokemon[i];
-    }
+  let savetoLocal = (index) => {
+    const pok = props.pokemon[index];
     let savedPokemons = [];
     if (localStorage.getItem("pokemon")) {
       savedPokemons = JSON.parse(localStorage.getItem("pokemon"));
     }
 
-    if (pok) {
+    if (pok && !savedPokemons.find((pokemons) => pokemons.name === pok.name)) {
       savedPokemons.push(pok);
     }
 
     localStorage.setItem("pokemon", JSON.stringify(savedPokemons));
-    console.log(savedPokemons.length);
-    console.log(pok);
-    // }
   };
 
   return (
@@ -40,15 +33,16 @@ const Card = (props) => {
             Pokemons in Alphabetical Order
           </span>
         </button>
-        <button
+
+        <Link
+          to="/favorites"
           className={`${styles.favorites__button} ${styles.button__general}`}
-          onClick={props.showFavorites}
         >
           Favorites ⭐{" "}
-        </button>
+        </Link>
       </div>
       <div className={`${styles.card} ${styles.rounded}`}>
-        {props.pokemon.map((pokemonName) => (
+        {props.pokemon.map((pokemonName, index) => (
           <div
             className={`${styles.card__image} ${styles.rounded}`}
             key={pokemonName.name}
@@ -62,7 +56,9 @@ const Card = (props) => {
 
             <button
               className={`${styles.save} ${styles.button__general}`}
-              onClick={savetoLocal}
+              onClick={() => {
+                savetoLocal(index);
+              }}
             >
               Save
             </button>

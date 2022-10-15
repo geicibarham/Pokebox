@@ -1,6 +1,6 @@
 .nav{
-    background-color: #363b81;
+    background-color: var(--nav-save);
     display:flex;
     justify-content: center;
-    color:white;
+    color:var(--white);
 }

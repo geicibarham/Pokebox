@@ -1,13 +1,13 @@
 .outer__container {
   display: grid;
   min-height: 100vh;
-  background-color: #fbd743;
+  background-color: var(--yellow);
   justify-items: center;
   padding-right: 20px;
 }
 
 .loading {
-  color: red;
+  color: var(--red)
 }
 @media screen and (max-width: 768px) {
   .wrapping_container {

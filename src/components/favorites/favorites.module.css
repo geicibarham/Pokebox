@@ -1,7 +1,7 @@
 .favorites{
     background-color: #ff1f1f3f;
    min-width: 60%;
-    color:white;
+    color:var(--white);
     border-radius: 38px;
     padding:8px;
     display: flex;
@@ -12,6 +12,29 @@
    
 }
 
+.icon{
+  width:30px;
+  height: 30px;
+  cursor: pointer;
+  align-self: baseline;
+  padding-top: 10px;
+}
+.favorte__item{
+display:grid;
+grid-template-columns: 1fr;
+border-radius: 10px;
+row-gap: 20px;
+}
+
+.singlePokemon{
+  background-color: var(--nav-save);
+  border-radius: 10px;
+  min-width: 150%;
+  padding:5px;
+  margin-top: 10px;
+  display:flex;
+  justify-content: center;
+}
 .seePokemons__button{
   height:fit-content;
   margin:none;

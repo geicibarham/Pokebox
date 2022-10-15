@@ -10,13 +10,14 @@
   padding: 18px;
   margin-top: 20px;
   border-radius: 8px;
-  color: white;
+  color: var(--white);
   cursor: pointer;
   padding: 10px;
+  text-decoration: none;
 }
 
 .save {
-  background-color: #363b81;
+  background-color: var(--nav-save)
 }
 
 .inline__icon {
@@ -24,7 +25,7 @@
 }
 
 .sort__button {
-  background-color: #ff1f1f;
+  background-color: var(--red)
 }
 
 .favorites__button {
@@ -37,7 +38,6 @@
 }
 .pokemonImage {
   width: 200px;
-
   height: 210px;
 }
 
@@ -53,11 +53,11 @@
   align-items: center;
   padding-top: 20px;
   padding-bottom: 20px;
-  color: white;
+  color: var(--white);
 }
 
 .card__image {
-  background-color: #5db9ff;
+  background-color: var(--light-blue);
   padding: 30px;
 }
 
