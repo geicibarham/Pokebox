@@ -31,9 +31,13 @@
   background-color: rgb(218, 192, 255);
 }
 
+.rounded{
+  border-radius: 10px;
+
+}
 .pokemonImage {
   width: 200px;
-  border-radius: 10px;
+
   height: 210px;
 }
 
@@ -55,7 +59,6 @@
 .card__image {
   background-color: #5db9ff;
   padding: 30px;
-  border-radius: 10px;
 }
 
 .pokeName {
@@ -66,5 +69,9 @@
   .card {
     display: grid;
     grid-template-columns: 1fr;
+  }
+
+  .button__container {
+    width: 100%;
   }
 }

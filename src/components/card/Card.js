@@ -47,9 +47,12 @@ const Card = (props) => {
           Favorites ⭐{" "}
         </button>
       </div>
-      <div className={styles.card}>
+      <div className={`${styles.card} ${styles.rounded}`}>
         {props.pokemon.map((pokemonName) => (
-          <div className={styles.card__image} key={pokemonName.name}>
+          <div
+            className={`${styles.card__image} ${styles.rounded}`}
+            key={pokemonName.name}
+          >
             <img
               className={styles.pokemonImage}
               src={`https://img.pokemondb.net/artwork/large/${pokemonName.name}.jpg`}
