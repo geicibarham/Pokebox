@@ -12,6 +12,7 @@
     width: 60%;
     min-height: 70vh;
     padding:20px;
+    margin:20px 20px 50px 20px;
    
 }
 
@@ -27,6 +28,8 @@
   cursor: pointer;
   align-self: baseline;
   padding-top: 10px;
+  border-radius: 5px;
+  margin-right: 10px;
 }
 .favorte__item{
 display:grid;
@@ -34,11 +37,13 @@ grid-template-columns: 1fr;
 border-radius: 10px;
 row-gap: 20px;
 }
-
+.trashMedium{
+  width: 60px;
+  cursor: pointer;
+}
 .singlePokemon{
   background-color: var(--nav-save);
   border-radius: 10px;
-  min-width: 150%;
   padding:5px;
   margin-top: 10px;
   display:flex;
@@ -51,19 +56,22 @@ row-gap: 20px;
   border:none;
   width:fit-content;
   border-radius:8px;
-  background:#CC0000;
-  color:white;
+  background:var(--red);
+  color:var(--white);
   cursor: pointer;
   text-decoration: none;
 }
 
 @media screen and (max-width:768px) {
     .favorites{
-    
-     
       height: fit-content;
       justify-content: center;
       text-align: center;
+      margin-bottom: 80px;
      
+    }
+
+    .singlePokemon{
+      width: fit-content;
     }
   }

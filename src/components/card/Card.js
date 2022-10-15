@@ -1,8 +1,10 @@
 import styles from "./card.module.css";
 import pokemonIcon from "../../assets/images/poke_pika.png";
-
+import {React,useState} from 'react'
 import { Link } from "react-router-dom";
 const Card = (props) => {
+
+  const [message,setMessage] = useState('')
   let savetoLocal = (index) => {
     const pok = props.pokemon[index];
     let savedPokemons = [];
@@ -15,11 +17,15 @@ const Card = (props) => {
     }
 
     localStorage.setItem("pokemon", JSON.stringify(savedPokemons));
+    setMessage('Saved')
+ 
   };
 
   return (
     <>
+      <p>{message}</p> 
       <div className={styles.button__container}>
+      
         <button
           className={`${styles.sort__button} ${styles.button__general}`}
           onClick={props.sortAlphabetically}
@@ -62,6 +68,7 @@ const Card = (props) => {
             >
               Save
             </button>
+         
           </div>
         ))}
       </div>
