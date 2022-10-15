@@ -1,12 +1,14 @@
 .favorites{
     background-color: #ff1f1f3f;
-   min-width: 100%;
+   min-width: 60%;
     color:white;
-    border-radius: 8px;
+    border-radius: 38px;
     padding:8px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 60%;
+    align-self: center;
    
 }
 

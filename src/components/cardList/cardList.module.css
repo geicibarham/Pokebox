@@ -1,21 +1,18 @@
-.outer__container{
+.outer__container {
   display: grid;
   min-height: 100vh;
   background-color: #fbd743;
   justify-items: center;
-  padding-right:20px;
-
-    
+  padding-right: 20px;
 }
 
-.loading{
-  color:red;
+.loading {
+  color: red;
 }
-@media screen and (max-width:768px) {
-  .wrapping_container{
+@media screen and (max-width: 768px) {
+  .wrapping_container {
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
-   
   }
 }

@@ -1,72 +1,70 @@
 .button__container {
-    display: flex;
-    justify-content: space-around;
-    align-items: baseline;
-    width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  width: 50%;
+}
+
+.button__general {
+  border: none;
+  padding: 18px;
+  margin-top: 20px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.save {
+  background-color: #363b81;
 }
 
 .inline__icon {
-    width: 20px;
+  width: 20px;
 }
 
 .sort__button {
-    border: none;
-    padding: 18px;
-    margin-top: 20px;
-    border-radius: 8px;
-    background-color: #ff1f1f;
-    color: white;
-    cursor: pointer;
-    padding: 10px;
-
+  background-color: #ff1f1f;
 }
 
 .favorites__button {
-    background-color: rgb(218, 192, 255);
-    border: none;
-    color: white;
-    padding: 10px;
-    border-radius: 8px;
-    cursor: pointer;
-
+  background-color: rgb(218, 192, 255);
 }
 
 .pokemonImage {
-    width: 200px;
-    border-radius: 10px;
-    height: 210px;
+  width: 200px;
+  border-radius: 10px;
+  height: 210px;
 }
 
 .card {
-    margin-top: 20px;
-    width: fit-content;
-    margin: 50px 0 0 50px;
-    display: grid;
-    grid-template-columns: 2fr 2fr 2fr;
-    grid-template-rows: 2fr 2fr 2fr;
-    column-gap: 20px;
-    row-gap: 20px;
-    align-items: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: white;
-
+  margin-top: 20px;
+  width: fit-content;
+  margin: 50px 0 0 50px;
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-rows: 2fr 2fr 2fr;
+  column-gap: 20px;
+  row-gap: 20px;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: white;
 }
 
 .card__image {
-    background-color: #5db9ff;
-    padding: 30px;
-    border-radius: 10px;
+  background-color: #5db9ff;
+  padding: 30px;
+  border-radius: 10px;
 }
-
 
 .pokeName {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 
-@media screen and (max-width:768px) {
-    .card {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
+@media screen and (max-width: 768px) {
+  .card {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
