@@ -2,21 +2,13 @@ import styles from './card.module.css'
 import React, { useState, useEffect } from 'react';
 import pokemonIcon from '../../assets/images/poke_pika.png'
 import Favorites from '../favorites/Favorites';
-
-const Card = ({ pokemon,showFavorites }) => {
-    const [sortedList, setSortedList] = useState({ pokemon })
-
-
-    const sortAz = () => {
-        setSortedList(pokemon.sort())
-
-    }
-    console.log(pokemon)
+import Search from '../search/Search';
+const Card = (props) => {
 
     let savetoLocal = () => {
         let pok;
-        for (let i = 0; i < pokemon.length; i++) {
-            pok = pokemon[i]
+        for (let i = 0; i < props.pokemon.length; i++) {
+            pok = props.pokemon[i]
         }
         let savedPokemons = []
         if (localStorage.getItem('pokemon')) {
@@ -35,38 +27,40 @@ const Card = ({ pokemon,showFavorites }) => {
         console.log(pok)
         // }
     }
-        return (
-            <>
+
+    return (
+        <>
+
             <div className={styles.button__container}>
                 <button
                     className={styles.sort__button}
-                    onClick={sortAz}>
+                    onClick={props.sortAlphabetically}>
                     <span>
                         <img
                             className={styles.inline__icon}
                             src={pokemonIcon} alt="pikachu icon" />
                         Pokemons in Alphabetical Order
                     </span></button>
-                    <button className={styles.favorites__button}
-                    onClick={showFavorites}>Favorites 
+                <button className={styles.favorites__button}
+                    onClick={props.showFavorites}>Favorites
                     ⭐ </button>
+            </div>
+            <div className={styles.card}>
+
+                {props.pokemon.map(pokemonName => (
+                    <div className={styles.card__image} key={pokemonName.name}>
+                        <img className={styles.pokemonImage}
+                            src={`https://img.pokemondb.net/artwork/large/${pokemonName.name}.jpg`}
+                            alt="cute pokemon images" />
+                        <p className={styles.pokeName}> {pokemonName.name}</p>
+                        <button onClick={savetoLocal}>Save</button>
                     </div>
-                <div className={styles.card}>
+                ))}
 
-                    {pokemon.map(pokemonName => (
-                        <div className={styles.card__image} key={pokemonName}>
-                            <img className={styles.pokemonImage}
-                                src={`https://img.pokemondb.net/artwork/large/${pokemonName}.jpg`}
-                                alt="cute pokemon images" />
-                            <p className={styles.pokeName}> {pokemonName}</p>
-                            <button onClick={savetoLocal}>Save</button>
-                        </div>
-                    ))}
+            </div>
 
-                </div>
+        </>
+    )
+}
 
-            </>
-        )
-    }
-
-    export default Card;
+export default Card;

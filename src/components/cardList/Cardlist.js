@@ -5,25 +5,50 @@ import axios from "axios";
 import Card from "../card/Card";
 import styles from './cardList.module.css'
 import Favorites from "../favorites/Favorites";
+import Search from "../search/Search";
 const Cardlist = () => {
 
     const [pokemon, setPokemon] = useState([]);
     const [loading, setLoading] = useState(true)
     const [showFavotites, setShowfavotires] = useState(false)
+    const [errorMessage, setError] = useState('')
+const [sortedPokemon,setSorted] = useState()
+
     useEffect(() => {
-        axios.get('https://pokeapi.co/api/v2/pokemon').then(res => {
-            setPokemon(res.data.results.map(pokemonName => pokemonName.name))
-            setLoading(false)
-        })
+        try {
+            axios.get('https://pokeapi.co/api/v2/pokemon').then(res => {
+                setPokemon(res.data.results)
+                setLoading(false)
+            })
+        } catch (error) {
+            console.log(error)
+        }
+
     }, [])
 
 
-    const showFavorites = () =>{
+
+    const sortAlphabetically = () => {
+       setSorted(pokemon.sort((a, b) => a.name.localeCompare(b.name)))
+      
+        console.log(sortedPokemon)
+
+    }
+    const showFavorites = () => {
         setShowfavotires(true)
     }
 
-    const showPokemons = () =>{
+    const showPokemons = () => {
         setShowfavotires(false)
+    }
+
+
+    const getinputvalue = (poke) => {
+        const filteredPokemon = pokemon.filter(item => item.name === poke);
+        if (filteredPokemon.length === 0) {
+            setError('No Pokemon Found!🥺')
+        }
+        setPokemon(filteredPokemon)
     }
 
     if (loading) {
@@ -33,22 +58,24 @@ const Cardlist = () => {
     }
 
     return (
+        <div className={styles.outer__container}>
+            {errorMessage}
+            {
+                !showFavotites &&
+                <>
+                    <Search getinputvalue={getinputvalue} />
+                    <Card pokemon={pokemon}
+                        sortAlphabetically={sortAlphabetically}
+                        showFavorites={showFavorites} />
 
+                </>
+            }
 
-  
-            <div className={styles.outer__container}>
-                {!showFavotites &&
-                    <Card pokemon={pokemon} 
-                    showFavorites ={showFavorites }/>
-                }
-
-
-        
             {
                 showFavotites &&
-                <Favorites showPokemons ={showPokemons} />}
+                <Favorites showPokemons={showPokemons} />}
 
-</div>
+        </div>
     )
 
 }

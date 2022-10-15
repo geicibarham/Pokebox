@@ -1,0 +1,37 @@
+.search{
+    border:none;
+    padding:8px;
+    border-radius: 8px;
+    margin-left:8px;
+    cursor: pointer;
+    color:white;
+    background-color: red;
+    height: fit-content;
+}
+.search:hover{
+    background-color: blue;
+
+}
+
+.form{
+    display:flex;
+    margin-top: 10px;
+    width: 60%;
+    justify-content: center;
+}
+
+.input{
+    width:100%;
+    border:none;
+    outline: solid blue;
+    border-radius: 8px;
+    text-transform: capitalize;
+    color:blue;
+    font-weight: bold;
+    
+}
+
+.input:focus{
+    
+    outline: none;
+}

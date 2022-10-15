@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 const Favorites = ({ showPokemons }) => {
 
     const [items, setItems] = useState([])
+   
     useEffect(() => {
         const items = JSON.parse
             (localStorage.getItem('pokemon'));
@@ -28,6 +29,8 @@ const Favorites = ({ showPokemons }) => {
 
                     ))}
             </ul>
+
+
         </section>
     )
 }
