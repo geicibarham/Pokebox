@@ -22,6 +22,7 @@ const Cardlist = () => {
 
   const sortAlphabetically = () => {
     setSorted(pokemon.sort((a, b) => a.name.localeCompare(b.name)));
+    console.log(sortedPokemon)
   };
 
   const getinputvalue = (poke) => {
